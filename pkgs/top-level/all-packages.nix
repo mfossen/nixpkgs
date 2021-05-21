@@ -23987,6 +23987,8 @@ in
 
   hugo = callPackage ../applications/misc/hugo { };
 
+  bic = callPackage ../applications/misc/bic { };
+
   go-org = callPackage ../applications/misc/go-org { };
 
   hydrogen = qt5.callPackage ../applications/audio/hydrogen { };
