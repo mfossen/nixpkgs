@@ -81,6 +81,9 @@ let
 
   recursiveUpdateMany = builtins.foldl' lib.recursiveUpdate {};
 
+  staticHaskellPackagesPlatforms =
+    packagePlatforms pkgs.pkgsStatic.haskellPackages;
+
   jobs = recursiveUpdateMany [
     (mapTestOn {
       haskellPackages = packagePlatforms pkgs.haskellPackages;
@@ -91,6 +94,16 @@ let
       in {
         haskell = testPlatforms.haskell;
         writers = testPlatforms.writers;
+      };
+
+      # test some statically linked packages to catch regressions
+      # and get some cache going for static compilation with GHC
+      pkgsStatic.haskellPackages = {
+        inherit (staticHaskellPackagesPlatforms)
+          hello
+          random
+          lens
+          ;
       };
 
       # top-level packages that depend on haskellPackages
@@ -162,6 +175,7 @@ let
         nix-tree
         nixfmt
         nota
+        nvfetcher
         ormolu
         pandoc
         pakcs
@@ -186,6 +200,7 @@ let
         tldr-hs
         tweet-hs
         update-nix-fetchgit
+        uusi
         uqm
         uuagc
         vaultenv
@@ -207,6 +222,7 @@ let
       # working as expected.
       cabal-install = all;
       Cabal_3_4_0_0 = with compilerNames; [ ghc884 ghc8104 ];
+      cabal2nix-unstable = all;
       funcmp = all;
       # Doesn't currently work on ghc-9.0:
       # https://github.com/haskell/haskell-language-server/issues/297
@@ -272,6 +288,25 @@ let
           (builtins.map
             (name: jobs.haskellPackages."${name}")
             (maintainedPkgNames pkgs.haskellPackages));
+      };
+      staticHaskellPackages = pkgs.releaseTools.aggregate {
+        name = "static-haskell-packages";
+        meta = {
+          description = "Static haskell builds using the pkgsStatic infrastructure";
+          maintainers = [
+            lib.maintainers.sternenseemann
+            lib.maintainers.rnhmjoj
+          ];
+        };
+        constituents = [
+          # TODO: reenable darwin builds if static libiconv works
+          jobs.pkgsStatic.haskellPackages.hello.x86_64-linux
+          jobs.pkgsStatic.haskellPackages.hello.aarch64-linux
+          jobs.pkgsStatic.haskellPackages.lens.x86_64-linux
+          jobs.pkgsStatic.haskellPackages.lens.aarch64-linux
+          jobs.pkgsStatic.haskellPackages.random.x86_64-linux
+          jobs.pkgsStatic.haskellPackages.random.aarch64-linux
+        ];
       };
     }
   ];

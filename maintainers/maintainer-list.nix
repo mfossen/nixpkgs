@@ -64,6 +64,16 @@
       fingerprint = "F466 A548 AD3F C1F1 8C88  4576 8702 7528 B006 D66D";
     }];
   };
+  _0xbe7a = {
+    email = "nix@be7a.de";
+    name = "Bela Stoyan";
+    github = "0xbe7a";
+    githubId = 6232980;
+    keys = [{
+      longkeyid = "rsa4096/0x6510870A77F49A99";
+      fingerprint = "2536 9E86 1AA5 9EB7 4C47  B138 6510 870A 77F4 9A99";
+    }];
+  };
   _1000101 = {
     email = "b1000101@pm.me";
     github = "1000101";
@@ -290,6 +300,12 @@
     githubId = 335271;
     name = "James Alexander Feldman-Crough";
   };
+  afontain = {
+    email = "antoine.fontaine@epfl.ch";
+    github = "necessarily-equal";
+    githubId = 59283660;
+    name = "Antoine Fontaine";
+  };
   aforemny = {
     email = "aforemny@posteo.de";
     github = "aforemny";
@@ -301,6 +317,12 @@
     github = "afranchuk";
     githubId = 4296804;
     name = "Alex Franchuk";
+  };
+  agbrooks = {
+    email = "andrewgrantbrooks@gmail.com";
+    github = "agbrooks";
+    githubId = 19290901;
+    name = "Andrew Brooks";
   };
   aherrmann = {
     email = "andreash87@gmx.ch";
@@ -774,6 +796,12 @@
     githubId = 718812;
     name = "Antoine R. Dumont";
   };
+  arezvov = {
+    email = "alex@rezvov.ru";
+    github = "arezvov";
+    githubId = 58516559;
+    name = "Alexander Rezvov";
+  };
   arianvp = {
     email = "arian.vanputten@gmail.com";
     github = "arianvp";
@@ -879,6 +907,12 @@
     github = "aske";
     githubId = 869771;
     name = "Kirill Boltaev";
+  };
+  ashley = {
+    email = "personavinny@protonmail.com";
+    github = "paranoidcat";
+    githubId = 84152630;
+    name = "Ashley Chiara";
   };
   asppsa = {
     email = "asppsa@gmail.com";
@@ -1891,6 +1925,16 @@
     githubId = 3392199;
     name = "Calum MacRae";
   };
+  cmars = {
+    email = "nix@cmars.tech";
+    github = "cmars";
+    githubId = 23741;
+    name = "Casey Marshall";
+    keys = [{
+      longkeyid = "rsa3072/0x6DEC2758ACD5A973";
+      fingerprint = "6B78 7E5F B493 FA4F D009  5D10 6DEC 2758 ACD5 A973";
+    }];
+  };
   cmcdragonkai = {
     email = "roger.qiu@matrix.ai";
     github = "cmcdragonkai";
@@ -2349,6 +2393,12 @@
     github = "delan";
     githubId = 465303;
   };
+  deliciouslytyped = {
+    email = "47436522+deliciouslytyped@users.noreply.github.com";
+    github = "deliciouslytyped";
+    githubId = 47436522;
+    name = "deliciouslytyped";
+  };
   delroth = {
     email = "delroth@gmail.com";
     github = "delroth";
@@ -2660,6 +2710,16 @@
     github = "drewrisinger";
     githubId = 10198051;
     name = "Drew Risinger";
+  };
+  drupol = {
+    name = "Pol Dellaiera";
+    email = "pol.dellaiera@protonmail.com";
+    github = "drupol";
+    githubId = 252042;
+    keys = [{
+      longkeyid = "ed25519/0x0AAF2901E8040715";
+      fingerprint = "85F3 72DF 4AF3 EF13 ED34  72A3 0AAF 2901 E804 0715";
+    }];
   };
   dschrempf = {
     name = "Dominik Schrempf";
@@ -3030,6 +3090,16 @@
     github = "eraserhd";
     githubId = 147284;
     name = "Jason Felice";
+  };
+  erdnaxe = {
+    email = "erdnaxe@crans.org";
+    github = "erdnaxe";
+    githubId = 2663216;
+    name = "Alexandre Iooss";
+    keys = [{
+      longkeyid = "rsa4096/0x6C79278F3FCDCC02";
+      fingerprint = "2D37 1AD2 7E2B BC77 97E1  B759 6C79 278F 3FCD CC02";
+    }];
   };
   ericbmerritt = {
     email = "eric@afiniate.com";
@@ -3535,6 +3605,12 @@
     githubId = 1943632;
     name = "fro_ozen";
   };
+  frogamic = {
+    email = "frogamic@protonmail.com";
+    github = "frogamic";
+    githubId = 10263813;
+    name = "Dominic Shelton";
+  };
   Frostman = {
     email = "me@slukjanov.name";
     github = "Frostman";
@@ -3668,6 +3744,16 @@
     github = "georgewhewell";
     githubId = 1176131;
     name = "George Whewell";
+  };
+  georgyo = {
+    email = "george@shamm.as";
+    github = "georgyo";
+    githubId = 19374;
+    name = "George Shammas";
+    keys = [{
+      longkeyid = "rsa4096/0x82BB70D541AE2DB4";
+      fingerprint = "D0CF 440A A703 E0F9 73CB  A078 82BB 70D5 41AE 2DB4";
+    }];
   };
   gerschtli = {
     email = "tobias.happ@gmx.de";
@@ -4223,6 +4309,12 @@
     githubId = 3661115;
     name = "Ingo Blechschmidt";
   };
+  icy-thought = {
+    name = "Icy-Thought";
+    email = "gilganyx@pm.me";
+    github = "Icy-Thought";
+    githubId = 53710398;
+  };
   idontgetoutmuch = {
     email = "dominic@steinitz.org";
     github = "idontgetoutmuch";
@@ -4334,6 +4426,16 @@
     github = "ingenieroariel";
     githubId = 54999;
     name = "Ariel Nunez";
+  };
+  irenes = {
+    name = "Irene Knapp";
+    email = "ireneista@gmail.com";
+    github = "IreneKnapp";
+    githubId = 157678;
+    keys = [{
+      longkeyid = "rsa4096/0xDBF252AFFB2619FD";
+      fingerprint = "E864 BDFA AB55 36FD C905  5195 DBF2 52AF FB26 19FD";
+    }];
   };
   ironpinguin = {
     email = "michele@catalano.de";
@@ -4561,12 +4663,6 @@
     githubId = 1982341;
     name = "Jack Cummings";
   };
-  jD91mZM2 = {
-    email = "me@krake.one";
-    github = "jD91mZM2";
-    githubId = 12830969;
-    name = "jD91mZM2";
-  };
   jdagilliland = {
     email = "jdagilliland@gmail.com";
     github = "jdagilliland";
@@ -4772,6 +4868,12 @@
     github = "jmettes";
     githubId = 587870;
     name = "Jonathan Mettes";
+  };
+  jo1gi = {
+    email = "joakimholm@protonmail.com";
+    github = "jo1gi";
+    githubId = 26695750;
+    name = "Joakim Holm";
   };
   joachifm = {
     email = "joachifm@fastmail.fm";
@@ -6358,12 +6460,6 @@
     githubId = 2649304;
     name = "M. Baeten";
   };
-  mbakke = {
-    email = "mbakke@fastmail.com";
-    github = "mbakke";
-    githubId = 1269099;
-    name = "Marius Bakke";
-  };
   mbaillie = {
     email = "martin@baillie.id";
     github = "martinbaillie";
@@ -7069,6 +7165,12 @@
     githubId = 5047140;
     name = "Victor Collod";
   };
+  musfay = {
+    email = "musfay@protonmail.com";
+    github = "musfay";
+    githubId = 33374965;
+    name = "Mustafa Çalışkan";
+  };
   mupdt = {
     email = "nix@pdtpartners.com";
     github = "mupdt";
@@ -7137,11 +7239,27 @@
     githubId = 818502;
     name = "Nathan Yong";
   };
+  natto1784 = {
+    email = "natto@weirdnatto.in";
+    github = "natto1784";
+    githubId = 56316606;
+    name = "Amneesh Singh";
+  };
   nbren12 = {
     email = "nbren12@gmail.com";
     github = "nbren12";
     githubId = 1386642;
     name = "Noah Brenowitz";
+  };
+  ncfavier = {
+    email = "n@monade.li";
+    github = "ncfavier";
+    githubId = 4323933;
+    name = "Naïm Favier";
+    keys = [{
+      longkeyid = "rsa2048/0x49B07322580B7EE2";
+      fingerprint = "51A0 705E 7DD2 3CBC 5EAA  B43E 49B0 7322 580B 7EE2";
+    }];
   };
   nckx = {
     email = "github@tobias.gr";
@@ -7172,6 +7290,11 @@
     github = "nequissimus";
     githubId = 628342;
     name = "Tim Steinbach";
+  };
+  nessdoor = {
+    name = "Tomas Antonio Lopez";
+    email = "entropy.overseer@protonmail.com";
+    githubId = 25993494;
   };
   netcrns = {
     email = "jason.wing@gmx.de";
@@ -7212,6 +7335,16 @@
     github = "nhooyr";
     githubId = 10180857;
     name = "Anmol Sethi";
+  };
+  nicbk = {
+    email = "nicolas@nicbk.com";
+    github = "nicbk";
+    githubId = 77309427;
+    name = "Nicolás Kennedy";
+    keys = [{
+      longkeyid = "rsa4096/0xC061089EFEBF7A35";
+      fingerprint = "7BC1 77D9 C222 B1DC FB2F  0484 C061 089E FEBF 7A35";
+    }];
   };
   nichtsfrei = {
     email = "philipp.eder@posteo.net";
@@ -7287,9 +7420,9 @@
     githubId = 3159451;
     name = "Nicolas Schneider";
   };
-  nipav = {
+  nkpvk = {
     email = "niko.pavlinek@gmail.com";
-    github = "nipav";
+    github = "nkpvk";
     githubId = 16385648;
     name = "Niko Pavlinek";
   };
@@ -8081,6 +8214,12 @@
     githubId = 1829032;
     name = "Paul Hendry";
   };
+  polygon = {
+    email = "polygon@wh2.tu-dresden.de";
+    name = "Polygon";
+    github = "polygon";
+    githubId = 51489;
+  };
   polyrod = {
     email = "dc1mdp@gmail.com";
     github = "polyrod";
@@ -8383,6 +8522,12 @@
     githubId = 1891350;
     name = "Michael Raskin";
   };
+  ratsclub = {
+    email = "victor@freire.dev.br";
+    github = "ratsclub";
+    githubId = 25647735;
+    name = "Victor Freire";
+  };
   ravloony = {
     email = "ravloony@gmail.com";
     name = "Tom Macdonald";
@@ -8525,6 +8670,12 @@
     githubId = 6047658;
     name = "Ryan Horiguchi";
   };
+  ribose-jeffreylau = {
+    name = "Jeffrey Lau";
+    email = "jeffrey.lau@ribose.com";
+    github = "ribose-jeffreylau";
+    githubId = 2649467;
+  };
   richardipsum = {
     email = "richardipsum@fastmail.co.uk";
     github = "richardipsum";
@@ -8594,6 +8745,12 @@
     github = "rixed";
     githubId = 449990;
     name = "Cedric Cellier";
+  };
+  rkitover = {
+    email = "rkitover@gmail.com";
+    github = "rkitover";
+    githubId = 77611;
+    name = "Rafael Kitover";
   };
   rkoe = {
     email = "rk@simple-is-better.org";
@@ -8736,10 +8893,14 @@
     }];
   };
   roosemberth = {
-    email = "roosembert.palacios+nixpkgs@gmail.com";
+    email = "roosembert.palacios+nixpkgs@posteo.ch";
     github = "roosemberth";
     githubId = 3621083;
     name = "Roosembert (Roosemberth) Palacios";
+    keys = [{
+      longkeyid = "rsa2048/0xCAAAECE5C2242BB7";
+      fingerprint = "78D9 1871 D059 663B 6117  7532 CAAA ECE5 C224 2BB7";
+    }];
   };
   rople380 = {
     name = "rople380";
@@ -11592,6 +11753,16 @@
     email = "1838397+pulsation@users.noreply.github.com";
     github = "pulsation";
     githubId = 1838397;
+  };
+  princemachiavelli = {
+    name = "Josh Hoffer";
+    email = "jhoffer@sansorgan.es";
+    github = "princemachiavelli";
+    githubId = 2730968;
+    keys = [{
+      longkeyid = "ed25519/0x83124F97A318EA18";
+      fingerprint = "DD54 130B ABEC B65C 1F6B  2A38 8312 4F97 A318 EA18";
+    }];
   };
   ydlr = {
     name = "ydlr";

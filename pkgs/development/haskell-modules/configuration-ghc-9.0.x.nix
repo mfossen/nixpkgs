@@ -5,7 +5,7 @@ with haskellLib;
 self: super: {
 
   # This compiler version needs llvm 10.x.
-  llvmPackages = pkgs.llvmPackages_10;
+  llvmPackages = pkgs.lib.dontRecurseIntoAttrs pkgs.llvmPackages_10;
 
   # Disable GHC 9.0.x core libraries.
   array = null;
@@ -43,13 +43,10 @@ self: super: {
   unix = null;
   xhtml = null;
 
-  # cabal-install needs more recent versions of random, but an older
-  # version of base16-bytestring.
+  # cabal-install needs more recent versions of Cabal and base16-bytestring.
   cabal-install = (doJailbreak super.cabal-install).overrideScope (self: super: {
     Cabal = null;
     base16-bytestring = self.base16-bytestring_0_1_1_7;
-    random = dontCheck super.random_1_2_0;  # break infinite recursion
-    hashable = doJailbreak super.hashable;  # allow random 1.2.x
   });
 
   # Jailbreaks & Version Updates
@@ -103,5 +100,19 @@ self: super: {
 
   # 5 introduced support for GHC 9.0.x, but hasn't landed in stackage yet
   lens = super.lens_5_0_1;
+
+  # 0.16.0 introduced support for GHC 9.0.x, stackage has 0.15.0
+  memory = super.memory_0_16_0;
+
+  # 0.29 introduced support for GHC 9.0.x, stackage has 0.28
+  cryptonite = super.cryptonite_0_29;
+
+  # GHC 9.0.x doesn't like `import Spec (main)` in Main.hs
+  # https://github.com/snoyberg/mono-traversable/issues/192
+  mono-traversable = dontCheck super.mono-traversable;
+
+  # Disable tests pending resolution of
+  # https://github.com/Soostone/retry/issues/71
+  retry = dontCheck super.retry;
 
 }
