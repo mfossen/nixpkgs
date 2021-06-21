@@ -134,16 +134,16 @@ let
       });
     })
 
-    # Remove after https://github.com/NixOS/nixpkgs/pull/121854 has passed staging-next
+    # Pinned due to API changes in eebrightbox>=0.0.5
     (self: super: {
-      sqlalchemy = super.sqlalchemy.overridePythonAttrs (oldAttrs: rec {
-        version = "1.4.13";
-        src = oldAttrs.src.override {
-          inherit version;
-          sha256 = "0npsg38d11skv04zvsi90j93f6jdgm8666ds2ri7shr1pz1732hx";
+      eebrightbox = super.eebrightbox.overridePythonAttrs (oldAttrs: rec {
+        version = "0.0.4";
+        src = fetchFromGitHub {
+          owner = "krygal";
+          repo = "eebrightbox";
+          rev = version;
+          sha256 = "0d8mmpwgrd7gymw5263r1v2wjv6dx6w6pq13d62fkfm4h2hya4a4";
         };
-        patches = [];
-        propagatedBuildInputs = [ python3.pkgs.greenlet ];
       });
     })
 
@@ -301,6 +301,7 @@ in with py.pkgs; buildPythonApplication rec {
     "awair"
     "aws"
     "axis"
+    "azure_devops"
     "azure_event_hub"
     "bayesian"
     "binary_sensor"
@@ -354,17 +355,27 @@ in with py.pkgs; buildPythonApplication rec {
     "dexcom"
     "dhcp"
     "dialogflow"
+    "directv"
     "discovery"
+    "doorbird"
     "dsmr"
     "dte_energy_bridge"
     "duckdns"
+    "dunehd"
     "dyson"
     "eafm"
+    "ecobee"
     "econet"
+    "ee_brightbox"
     "efergy"
+    "elgato"
     "emonitor"
     "emulated_hue"
+    "emulated_kasa"
+    "emulated_roku"
+    "enocean"
     "enphase_envoy"
+    "epson"
     "esphome"
     "everlights"
     "ezviz"
@@ -424,11 +435,16 @@ in with py.pkgs; buildPythonApplication rec {
     "group"
     "growatt_server"
     "guardian"
+    "habitica"
+    "hangouts"
     "harmony"
     "hassio"
     "hddtemp"
+    "heos"
+    "here_travel_time"
     "history"
     "history_stats"
+    "hive"
     "home_connect"
     "home_plus_control"
     "homeassistant"
@@ -459,6 +475,7 @@ in with py.pkgs; buildPythonApplication rec {
     "intent"
     "intent_script"
     "ios"
+    "ipma"
     "ipp"
     "iqvia"
     "islamic_prayer_times"
@@ -494,10 +511,12 @@ in with py.pkgs; buildPythonApplication rec {
     "met"
     "met_eireann"
     "meteoclimatic"
+    "mhz19"
     "microsoft_face"
     "microsoft_face_detect"
     "microsoft_face_identify"
     "mikrotik"
+    "mill"
     "min_max"
     "minecraft_server"
     "minio"
@@ -589,6 +608,7 @@ in with py.pkgs; buildPythonApplication rec {
     "script"
     "search"
     "season"
+    "sense"
     "sensor"
     "sentry"
     "sharkiq"
@@ -724,8 +744,12 @@ in with py.pkgs; buildPythonApplication rec {
     "--only-rerun RuntimeError"
     # enable full variable printing on error
     "--showlocals"
+    # here_travel_time/test_sensor.py: Tries to access HERE API: herepy.error.HEREError: Error occured on __get
+    "--deselect tests/components/here_travel_time/test_sensor.py::test_invalid_credentials"
     # screenlogic/test_config_flow.py: Tries to send out UDP broadcasts
     "--deselect tests/components/screenlogic/test_config_flow.py::test_form_cannot_connect"
+    # abode/test_camera.py: Race condition in pickle file creationg
+    "--deselect tests/components/abode/test_camera.py::test_camera_off"
     # asuswrt/test_config_flow.py: Sandbox network limitations, fails with unexpected error
     "--deselect tests/components/asuswrt/test_config_flow.py::test_on_connect_failed"
     # shelly/test_config_flow.py: Tries to join multicast group
@@ -782,6 +806,8 @@ in with py.pkgs; buildPythonApplication rec {
     # onboarding tests rpi_power component, for which we are lacking rpi_bad_power library
     "test_onboarding_core_sets_up_rpi_power"
     "test_onboarding_core_no_rpi_power"
+    # hue/test_sensor_base.py: Race condition when counting events
+    "test_hue_events"
   ];
 
   preCheck = ''

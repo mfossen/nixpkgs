@@ -352,11 +352,21 @@ let
         mktplcRef = {
           name = "gitlens";
           publisher = "eamodio";
-          version = "11.1.3";
-          sha256 = "sha256-hqJg3jP4bbXU4qSJOjeKfjkPx61yPDMsQdSUVZObK/U=";
+          version = "11.5.1";
+          sha256 = "sha256-Ic7eT8WX2GDYIj/aTu1d4m+fgPtXe4YQx04G0awbwnM=";
         };
-        meta = {
-          license = lib.licenses.mit;
+        meta = with lib; {
+          changelog = "https://marketplace.visualstudio.com/items/eamodio.gitlens/changelog";
+          description = "GitLens supercharges the Git capabilities built into Visual Studio Code.";
+          longDescription = ''
+            Supercharge the Git capabilities built into Visual Studio Code — Visualize code authorship at a glance via Git
+            blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via
+            powerful comparison commands, and so much more
+          '';
+          downloadPage = "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens";
+          homepage = "https://gitlens.amod.io/";
+          license = licenses.mit;
+          maintainers = with maintainers; [ ratsclub ];
         };
       };
 
@@ -667,6 +677,23 @@ let
           homepage = "https://github.com/iciclesoft/workspacesort-for-VSCode";
           license = licenses.mit;
           maintainers = with maintainers; [ dbirks ];
+        };
+      };
+
+      ionide.ionide-fsharp = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          name = "Ionide-fsharp";
+          publisher = "Ionide";
+          version = "5.5.5";
+          sha256 = "xrBNiIbZVJ0sGUk/4PudD8kSyX94QkrFtf7Ho/sB0Vs=";
+        };
+        meta = with lib; {
+          changelog = "https://marketplace.visualstudio.com/items/Ionide.Ionide-fsharp/changelog";
+          description = "Enhanced F# Language Features for Visual Studio Code";
+          downloadPage = "https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp";
+          homepage = "https://ionide.io";
+          license = licenses.mit;
+          maintainers = with maintainers; [ ratsclub ];
         };
       };
 
@@ -1149,6 +1176,23 @@ let
         };
         meta = {
           license = lib.licenses.mit;
+        };
+      };
+
+      svsool.markdown-memo = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          name = "markdown-memo";
+          publisher = "svsool";
+          version = "0.3.8";
+          sha256 = "eFiCCXxrOnXwJK1AOMfIDsPGsFG3ArLD1X/uAEH5lRY=";
+        };
+        meta = with lib; {
+          changelog = "https://marketplace.visualstudio.com/items/svsool.markdown-memo/changelog";
+          description = "Markdown knowledge base with bidirectional [[link]]s built on top of VSCode";
+          downloadPage = "https://marketplace.visualstudio.com/items?itemName=svsool.markdown-memo";
+          homepage = "https://github.com/svsool/vscode-memo";
+          license = licenses.mit;
+          maintainers = with maintainers; [ ratsclub ];
         };
       };
 

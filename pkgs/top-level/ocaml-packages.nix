@@ -217,6 +217,8 @@ let
 
     cstruct = callPackage ../development/ocaml-modules/cstruct {};
 
+    cstruct-async = callPackage ../development/ocaml-modules/cstruct/async.nix { };
+
     cstruct-lwt = callPackage ../development/ocaml-modules/cstruct/lwt.nix { };
 
     cstruct-sexp = callPackage ../development/ocaml-modules/cstruct/sexp.nix {};
@@ -1031,6 +1033,8 @@ let
     ulex = callPackage ../development/ocaml-modules/ulex { };
 
     tls = callPackage ../development/ocaml-modules/tls { };
+
+    tls-async = callPackage ../development/ocaml-modules/tls/async.nix { };
 
     tls-mirage = callPackage ../development/ocaml-modules/tls/mirage.nix { };
 
