@@ -1,15 +1,15 @@
 { lib, buildPackages, fetchFromGitHub, fetchpatch, perl, buildLinux, ... } @ args:
 
 buildLinux (args // {
-  version = "5.9.0-2020.11.20";
-  modDirVersion = "5.9.0";
+  version = "5.12.0-2021.06.21";
+  modDirVersion = "5.12.0";
 
   src = fetchFromGitHub {
     owner = "koverstreet";
     repo = "bcachefs";
     # commit does not exist on any branch on the target repository
-    rev = "6a505b63ed3003faf5000f19fd08bbd477d93fbc";
-    sha256 = "1rf34gzv9npafp1c3i6lymk3b0gnqp4rb0wl33pw6yrpgnsry3cc";
+    rev = "775b36b4720cd51b4a7f01619a2ed3d092666518";
+    sha256 = "sha256-GSzZzvZ0vHjKZhk9WB2Nh3ViUTX0KA2j/bli03PRAmI=";
   };
 
   extraConfig = "BCACHEFS_FS m";

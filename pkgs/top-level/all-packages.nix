@@ -7247,6 +7247,8 @@ in
 
   nomad-driver-podman = callPackage ../applications/networking/cluster/nomad-driver-podman { };
 
+  nomad-driver-containerd = callPackage ../applications/networking/cluster/nomad-driver-containerd { };
+
   notable = callPackage ../applications/misc/notable { };
 
   ntlmrecon = callPackage ../tools/security/ntlmrecon { };
